@@ -48,6 +48,6 @@
                 <a href="order.html"><button id="order_now_button">Order Now</button></a>
         </span>
         <script src="js/main.js"></script>
-
+        <?php include 'footer.php' ?>
     </body>
 </html>
