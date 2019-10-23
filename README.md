@@ -10,3 +10,7 @@ when local hoasting, use crtl+shift+r to refresh CSS changes
 Nav bar insert:
 
 	<?php include 'nav.php';?>
+
+Footer:
+	
+	<?php include 'footer.php';?>
