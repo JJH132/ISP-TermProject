@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>[Untitled]'s Online Pizza Ordering</title>
         <link rel="icon" href="img/pizza.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/default_style.css">
         <link rel="author" href="humans.txt">
     </head>
     <body>
