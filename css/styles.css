@@ -1,0 +1,27 @@
+#header
+{
+	position: -webkit-sticky;
+	position: sticky;
+	background-color: red;
+	border: 4px dotted black;
+}
+#sign_in
+{
+	position: absolute;
+	left:30%;
+	top:30%;
+
+}
+#sign_up
+{
+	position: absolute;
+	right:30%;
+	top:33%;
+}
+
+#order_now
+{
+	position:absolute;
+	left:46%;
+	top:50%;
+}

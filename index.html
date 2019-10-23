@@ -5,23 +5,52 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bobby's Online Pizza Ordering</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="author" href="humans.txt">
     </head>
-    <body>
-        <h1 align="center"> Bobby's Pizza Online </h1>
-        <table id="Sign_in_table" align="center">
-        	<tr>
-        		<td>Existing user? Sign in!</td>
-        	</tr>
-        	<tr>
-        		<td>Username: <input type="text"></td>
-        	</tr>
-        	<tr>
-        		<td>Password: <input type="text"></td>
-        	</tr>
+    <body background="img/tree.jpg">
+    	<div id="header">
+        	<h1 align="center"> Bobby's Pizza Online </h1>
+    	</div>
+        <div align="center" id="sign_in">
+            <form action="submitscript.php" method="post">
+                <table id="Sign_in_table" align="center">
+                	<tr>
+                		<td align="center"><h3>Existing user? Sign in!</h3></td>
+                	</tr>
+                	<tr>
+                		<td><b>Username:</b> <input type="text"></td>
+                	</tr>
+                	<tr>
+                		<td><b>Password:</b> <input type="Password"></td>
+                	</tr>
+                </table>
+            </form>
+        	<button type="submit" id="sign_in_button" align="center">Sign In</button>
+        </div>
+        <span id="sign_up">
+        <table>
+            <tr>
+                <td>
+                     <b>Don't Have an Account?</b><br>
+                </td>
+            </tr>
+            <form action="signup.php">
+            <tr>
+                <td align="center">
+                    </form>
+                <input type="button" type="submit" id="sign_up_button" align="center">Sign Up</inp>
+                </td>
+            </form>
+            </tr>
         </table>
-    	<button type="submit" id="submit" align="center">Sign In</button>
+        </span>
+        <span id="order_now">
+            <form action="order.php">
+                <input type="button" type="submit" id="order_now_button">Order Now</button>
+            </form>
+        </span>
         <script src="js/main.js"></script>
+
     </body>
 </html>
