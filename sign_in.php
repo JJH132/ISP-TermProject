@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
@@ -10,16 +10,8 @@
         <link rel="author" href="humans.txt">
     </head>
     <body>
-    	<nav>
-            <a style="text-decoration: none;" href="index.html">
-            <div class="home_link">
-                <img src="img/untitled_logo.png">
-                <h1>[Untitled]'s Pizza Online </h1>
-            </div>
-            </a>
-            <a href=""></a>
-    	</nav>
-        <div align="center" id="sign_in">
+        <?php include 'nav.php';?>
+    	<div align="center" id="sign_in">
             <form action="submitscript.php" method="post">
                 <table id="Sign_in_table" align="center">
                 	<tr>
