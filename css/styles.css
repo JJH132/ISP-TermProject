@@ -1,10 +1,23 @@
-#header
-{
-	position: -webkit-sticky;
-	position: sticky;
+nav{
+/*	position: -webkit-sticky;
+	position: sticky;*/
 	background-color: red;
-	border: 4px dotted black;
+
 }
+
+body{
+	margin: 0;
+}
+
+.home_link{
+	/*position: absolute;*/
+}
+
+.home_link h1, img{
+	display: inline;
+	vertical-align: middle;
+}
+
 #sign_in
 {
 	position: absolute;
