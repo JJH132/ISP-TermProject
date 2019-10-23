@@ -8,9 +8,7 @@
         <link rel="author" href="humans.txt">
     </head>
     <body>
-        <div id="header">
-            <h1 align="center"> [Untitled]'s Pizza Online </h1>
-        </div>
+        <?php include 'nav.php';?>
         <form>
         <table>
             <tr>
