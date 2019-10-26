@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Untitled Pizza | Home</title>
-	<meta charset="utf-8">
+    <title>[Untitled] Pizza | Home</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/pizza.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/default_style.css">
-    <link rel="author" href="humans.txt">
+    <?php include 'htmlHead.php';?>
 </head>
 <body>
-	<?php include 'nav.php' ?>
-	<h1>Untitled Pizza Home</h1>
-	<br>
-	<span style="font-size: 2.5em; margin: auto;">DEALS! DEALS! DEALS!</span>
-	<?php include 'footer.php' ?>
+    <?php include 'nav.php' ?>
+    <h1 style="color: #3D3D3D;">Untitled Pizza Home</h1>
+
+    <a href="order.php">ORDER LINK</a>
+
+    <br>
+    <span style="font-size: 2.5em; margin: auto;">DEALS! DEALS! DEALS!</span>
+    <?php include 'footer.php' ?>
 </body>
 </html>

@@ -2,9 +2,9 @@
     <div class="home_link">
     <a style="text-decoration: none;" href="index.php">
     
-        <img src="img/untitled_logo.png">
-        <h1>[Untitled]'s Pizza Online </h1>
+        <img style="height: 100px" src="img/untitled_logo.png">
+        <h1><span style="color: #3D3D3D; font-size: 1.3em;">[</span>Untitled<span style="color: #3D3D3D; font-size: 1.3em;">]</span>'s Pizza Online </h1>
     </a>
     </div>
-    <a style="margin: auto 10px auto 0;" href="sign_in.php">Sign in</a>
+    <a class="rightNavLinks" href="sign_in.php">Sign in</a>
 </nav>

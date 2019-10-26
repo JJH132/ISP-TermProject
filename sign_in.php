@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <title>[Untitled] Pizza | Login</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>[Untitled]'s Online Pizza Ordering</title>
-        <link rel="icon" href="img/pizza.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/default_style.css">
-        <link rel="author" href="humans.txt">
+        <?php include 'htmlHead.php';?>
     </head>
     <body>
         <?php include 'nav.php';?>

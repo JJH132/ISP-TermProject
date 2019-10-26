@@ -9,8 +9,11 @@ when local hoasting, use crtl+shift+r to refresh CSS changes
 
 Nav bar insert:
 
-	<?php include 'nav.php';?>
+    <?php include 'nav.php';?>
 
 Footer:
-	
-	<?php include 'footer.php';?>
+    
+    <?php include 'footer.php';?>
+
+## CSS Files are now PHP
+To be able to have colors that are variables, css files are now php.

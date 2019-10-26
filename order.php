@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <title>[Untitled] Piza | Order</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>[Untitled] Order Page</title>
-        <link rel="stylesheet" href="css/default_style.css">
-        <link rel="author" href="humans.txt">
+        <?php include 'htmlHead.php';?>
     </head>
     <body>
         <?php include 'nav.php';?>
