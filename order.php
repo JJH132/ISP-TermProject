@@ -10,6 +10,20 @@
         <form>
         <table>
             <tr>
+                <td>
+                Cheese: 
+                </td><td>
+                    <input type="radio" name="cheese" value="normal" checked> Normal
+                </td><td>
+                    <input type="radio" name="cheese" value="none" > No Cheese
+                </td><td>
+                    <input type="radio" name="cheese" value="extra-whole"> Extra Cheese (Whole Pizza)
+                </td><td>
+                    <input type="radio" name="cheese" value="extra-left-half">Extra Cheese (Left only)
+                </td><td>
+                    <input type="radio" name="cheese" value="extra-right-half">Extra Cheese (Right only)
+                </td>
+            </tr><tr>
                 Meats:
             </tr><tr>
                 <td>Pepperoni </td><td>
@@ -175,7 +189,7 @@
                     <input type="radio" name="olives" value="right-half">Right only 
                 </td>
             </tr><tr>
-                 <td>Banana Peppersbanana-peppers </td><td>
+                 <td>Banana Peppers</td><td>
                     <input type="radio" name="banana-peppers" value="none"> None 
                 </td><td>
                     <input type="radio" name="banana-peppers" value="full"> Full 
@@ -204,7 +218,11 @@
                 </td><td>
                     <input type="radio" name="jalapeno-peppers" value="right-half">Right only 
                 </td>
+            </tr><tr>
+                End
             </tr>
+
+
 
 
 
