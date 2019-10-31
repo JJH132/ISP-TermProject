@@ -5,8 +5,7 @@ define('DB_PASSWORD', 'administrator');
 define('DB_NAME', 'untitledpizza');
 
 
-$conn = mysqli_connect(DB_USERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
+$link = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
 // Check connection
 if (!$conn) {
     echo "connection failed";
