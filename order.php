@@ -27,7 +27,7 @@
                 Meats:
             </tr><tr>
                 <td>Pepperoni </td><td>
-                    <input type="radio" name="pepperoni" value="none"> None 
+                    <input type="radio" name="pepperoni" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="pepperoni" value="full"> Full 
                 </td><td>
@@ -37,7 +37,7 @@
                 </td>
             </tr><tr>
                 <td>Ham </td><td>
-                    <input type="radio" name="ham" value="none"> None 
+                    <input type="radio" name="ham" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="ham" value="full"> Full 
                 </td><td>
@@ -47,7 +47,7 @@
                 </td>
             </tr><tr>
                 <td>Bacon </td><td>
-                    <input type="radio" name="bacon" value="none"> None 
+                    <input type="radio" name="bacon" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="bacon" value="full"> Full 
                 </td><td>
@@ -57,7 +57,7 @@
                 </td>
             </tr><tr>
                  <td>Sausage </td><td>
-                    <input type="radio" name="sausage" value="none"> None 
+                    <input type="radio" name="sausage" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="sausage" value="full"> Full 
                 </td><td>
@@ -67,7 +67,7 @@
                 </td>
             </tr><tr>
                  <td>Salami </td><td>
-                    <input type="radio" name="salami" value="none"> None 
+                    <input type="radio" name="salami" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="salami" value="full"> Full 
                 </td><td>
@@ -77,7 +77,7 @@
                 </td>
             </tr><tr>
                  <td>Beef</td><td>
-                    <input type="radio" name="beef" value="none"> None 
+                    <input type="radio" name="beef" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="beef" value="full"> Full 
                 </td><td>
@@ -87,7 +87,7 @@
                 </td>
             </tr><tr>
                  <td>Anchovies </td><td>
-                    <input type="radio" name="anchovies" value="none"> None 
+                    <input type="radio" name="anchovies" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="anchovies" value="full"> Full 
                 </td><td>
@@ -97,7 +97,7 @@
                 </td>
             </tr><tr>
                  <td>Chicken </td><td>
-                    <input type="radio" name="chicken" value="none"> None 
+                    <input type="radio" name="chicken" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="chicken" value="full"> Full 
                 </td><td>
@@ -108,7 +108,7 @@
             </tr><tr>
 
                  <td>Pork </td><td>
-                    <input type="radio" name="pork" value="none"> None 
+                    <input type="radio" name="pork" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="pork" value="full"> Full 
                 </td><td>
@@ -120,7 +120,7 @@
                 <td> Non-Meat Options: </td>
             </tr><tr>
                  <td>Pineapple </td><td>
-                    <input type="radio" name="pineapple" value="none"> None 
+                    <input type="radio" name="pineapple" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="pineapple" value="full"> Full 
                 </td><td>
@@ -130,7 +130,7 @@
                 </td>
             </tr><tr>
                  <td>Mushrooms </td><td>
-                    <input type="radio" name="mushrooms" value="none"> None 
+                    <input type="radio" name="mushrooms" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="mushrooms" value="full"> Full 
                 </td><td>
@@ -140,7 +140,7 @@
                 </td>
             </tr><tr>
                  <td>Onions </td><td>
-                    <input type="radio" name="onions" value="none"> None 
+                    <input type="radio" name="onions" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="onions" value="full"> Full 
                 </td><td>
@@ -150,7 +150,7 @@
                 </td>
             </tr><tr>
                  <td>Hot Sauce </td><td>
-                    <input type="radio" name="hot-sauce" value="none"> None 
+                    <input type="radio" name="hot-sauce" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="hot-sauce" value="full"> Full 
                 </td><td>
@@ -160,7 +160,7 @@
                 </td>
             </tr><tr>
                  <td>Spinach </td><td>
-                    <input type="radio" name="spinach" value="none"> None 
+                    <input type="radio" name="spinach" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="spinach" value="full"> Full 
                 </td><td>
@@ -170,7 +170,7 @@
                 </td>
             </tr><tr>
                  <td>Diced Tomatoes </td><td>
-                    <input type="radio" name="tomatoes" value="none"> None 
+                    <input type="radio" name="tomatoes" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="tomatoes" value="full"> Full 
                 </td><td>
@@ -180,7 +180,7 @@
                 </td>
             </tr><tr>
                  <td>Olives </td><td>
-                    <input type="radio" name="olives" value="none"> None 
+                    <input type="radio" name="olives" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="olives" value="full"> Full 
                 </td><td>
@@ -190,7 +190,7 @@
                 </td>
             </tr><tr>
                  <td>Banana Peppers</td><td>
-                    <input type="radio" name="banana-peppers" value="none"> None 
+                    <input type="radio" name="banana-peppers" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="banana-peppers" value="full"> Full 
                 </td><td>
@@ -200,7 +200,7 @@
                 </td>
             </tr><tr>
                  <td>Red Peppers </td><td>
-                    <input type="radio" name="red-peppers" value="none"> None 
+                    <input type="radio" name="red-peppers" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="red-peppers" value="full"> Full 
                 </td><td>
@@ -210,7 +210,7 @@
                 </td>
             </tr><tr>
                  <td>Jalapeño Peppers </td><td>
-                    <input type="radio" name="jalapeno-peppers" value="none"> None 
+                    <input type="radio" name="jalapeno-peppers" value="none" checked> None 
                 </td><td>
                     <input type="radio" name="jalapeno-peppers" value="full"> Full 
                 </td><td>
