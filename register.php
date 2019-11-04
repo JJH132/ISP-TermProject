@@ -1,3 +1,6 @@
+
+
+
 <?php 
 	//include the config file
 	require_once "config.php";
@@ -60,7 +63,7 @@
 
 		if(empty($email_err) && empty($password_err) && empty($confirm_password_err))
 		{
-			$sql = "INSERT INTO users (email, password, phone_number, address, full_name, created_at) VALUES (?,?)";
+			$sql = "INSERT INTO users (email, password) VALUES (?,?)";
 
 			if($stmt = $mysqli->prepare($sql))
 			{
@@ -85,8 +88,6 @@
 	}
 ?>
 
-
-<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -104,7 +105,7 @@
             <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
+                <span class="help-block"><?php echo $email_err; ?></span>
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>
@@ -125,3 +126,4 @@
     </div>    
     </body>
 </html>
+
