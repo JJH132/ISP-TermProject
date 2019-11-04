@@ -30,13 +30,7 @@
                      <b>Don't Have an Account?</b><br>
                 </td>
             </tr>
-            <form action="signup.php">
-            <tr>
-                <td align="center">
-                    </form>
-                <a href="signup.php"><button id="sign_up_button" align="center">Sign Up</button></a>
-                </td>
-            </form>
+            <?php include "register.php"?>
             </tr>
         </table>
         </span>
