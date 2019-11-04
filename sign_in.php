@@ -24,15 +24,10 @@
         	<button type="submit" id="sign_in_button" align="center">Sign In</button>
         </div>
         <span id="sign_up">
-        <table>
-            <tr>
-                <td>
-                     <b>Don't Have an Account?</b><br>
-                </td>
-            </tr>
-            <?php include "register.php"?>
-            </tr>
-        </table>
+
+                     <a href="register.php"><b>Don't Have an Account?</b></a>
+                        <br>
+
         </span>
         <span id="order_now">
                 <a href="order.php"><button id="order_now_button">Order Now</button></a>
