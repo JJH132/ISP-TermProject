@@ -29,7 +29,7 @@
 					}
 					else
 					{
-						$username = trim($_POST["email"]);		
+						$email = trim($_POST["email"]);		
 					}
 				}
 				else
@@ -55,7 +55,7 @@
 				$password = trim($_POST["password"]);
 			}
 
-			if(empty(trim($_POST["password"])))
+			if(empty(trim($_POST["confirm_password"])))
 			{
 				$confirm_password_err = "Please confirm your password.";
 			}
@@ -94,7 +94,7 @@
 			$mysqli->close();
 		}
 ?>
-
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
