@@ -15,7 +15,7 @@
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
-		if(empty(trim($_POST["emaill"])))
+		if(empty(trim($_POST["email"])))
 		{
 			$email_err = "Please enter a valid email. ";
 		}

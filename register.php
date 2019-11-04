@@ -1,91 +1,98 @@
-
-
-
 <?php 
 	//include the config file
-	require_once "config.php";
+	require "config.php";
 	$email = $password = $confirm_password = "";
 	$email_err = $password_err = $confirm_password_err ="";
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
-		$email_err = "Please enter your email.";
-	}
-	else
-	{
-		$sql = "SELECT user_id FROM users WHERE email = ?";
-		if($stmt = $mysqli->prepare($sql))
+		if(empty(trim($_POST["email"])))
 		{
-			$stmt->bind_param("s", $param_email);
-
-			$param_email = trim($_POST["email"]);
-
-			if($stmt->execute())
-			{
-				$stmt->store_result();
-
-				if($stmt->num_rows == 1)
-				{
-					$email_err = "Sorry, this email is already in use. Please try another.";
-				}
-				else
-				{
-					echo "Oopsy!! Something went very wrong. Please try again at a later time.";
-				}
-			}
-			$stmt->close();
-		}
-		if(empty(trim($_POST["password"])))
-		{
-			$password_err = "Please enter your password.";
-		}
-		elseif (strlen(trim($_POST["password"])) < 6)
-		{
-			$password_err = "The password must be at least 6 characters long.";
+			$email_err = "Please enter your email.";
 		}
 		else
 		{
-			$password = trim($_POST["password"]);
-		}
-
-		if(empty(trim($_POST["password"])))
-		{
-			$confirm_password_err = "Please confirm your password.";
-		}
-		else
-		{
-			$confirm_password = trim($_POST["confirm_password"]);
-			if(empty($password_err) && ($password != $confirm_password))
-			{
-				$confirm_password_err = "The passwords did not match. Please try again.";
-			}
-		}
-
-		if(empty($email_err) && empty($password_err) && empty($confirm_password_err))
-		{
-			$sql = "INSERT INTO users (email, password) VALUES (?,?)";
-
+			$sql = "SELECT user_id FROM users WHERE email = ?";
 			if($stmt = $mysqli->prepare($sql))
 			{
-				$stmt->bind_param("ss", $param_email, $param_password);
+				$stmt->bind_param("s", $param_email);
 
-				$param_email = $email;
-				$param_password = password_hash($password,PASSWORD_DEFAULT);
+				$param_email = trim($_POST["email"]);
 
 				if($stmt->execute())
 				{
-					header("location: login.php");
+					$stmt->store_result();
+
+					if($stmt->num_rows == 1)
+					{
+						$email_err = "Sorry, this email is already in use. Please try another.";
+					}
+					else
+					{
+						$username = trim($_POST["email"]);		
+					}
 				}
 				else
 				{
-					echo "Something went very wrong. Please try again later!";
+					echo "Oopsy! Something went very wrong. Please try again later.";
+				}
+			
+			}	
+			
+
+				$stmt->close();
+		}
+			if(empty(trim($_POST["password"])))
+			{
+				$password_err = "Please enter your password.";
+			}
+			elseif (strlen(trim($_POST["password"])) < 6)
+			{
+				$password_err = "The password must be at least 6 characters long.";
+			}
+			else
+			{
+				$password = trim($_POST["password"]);
+			}
+
+			if(empty(trim($_POST["password"])))
+			{
+				$confirm_password_err = "Please confirm your password.";
+			}
+			else
+			{
+				$confirm_password = trim($_POST["confirm_password"]);
+				if(empty($password_err) && ($password != $confirm_password))
+				{
+					$confirm_password_err = "The passwords did not match. Please try again.";
 				}
 			}
 
-			$stmt->close();
+			if(empty($email_err) && empty($password_err) && empty($confirm_password_err))
+			{
+				$sql = "INSERT INTO users (email, password) VALUES (?,?)";
+
+				if($stmt = $mysqli->prepare($sql))
+				{
+					$stmt->bind_param("ss", $param_email, $param_password);
+
+					$param_email = $email;
+					$param_password = password_hash($password,PASSWORD_DEFAULT);
+
+					if($stmt->execute())
+					{
+						header("location: login.php");
+					}
+					else
+					{
+						echo "Something went very wrong. Please try again later!";
+					}
+				}
+
+				$stmt->close();
+			}
+			$mysqli->close();
 		}
-		$mysqli->close();
-	}
 ?>
 
 <html>
