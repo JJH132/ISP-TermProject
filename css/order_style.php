@@ -11,6 +11,13 @@ font-family: 'Montserrat Alternates', sans-serif;
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
+.inlineTable {
+    display: inline-block;
+    padding-right: 30px;
+}
+.inlineTable1 {
+    display: none;
+}
 .onoffswitch-checkbox {
     display: none;
 }
