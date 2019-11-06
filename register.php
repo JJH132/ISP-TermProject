@@ -1,8 +1,8 @@
 <?php 
 	//include the config file
 	require "config.php";
-	$email = $password = $confirm_password = "";
-	$email_err = $password_err = $confirm_password_err ="";
+	$email = $password = $confirm_password = $phone_number = $address = $full_name = "";
+	$email_err = $password_err = $confirm_password_err = $phone_number_err = $address_err = $full_name_err = "";
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
@@ -68,15 +68,18 @@
 				}
 			}
 
-			if(empty($email_err) && empty($password_err) && empty($confirm_password_err))
+			if(empty($email_err) && empty($password_err) && empty($confirm_password_err) && empty($phone_number_err) && empty($address_err) && empty($full_name_err))
 			{
-				$sql = "INSERT INTO users (email, password) VALUES (?,?)";
+				$sql = "INSERT INTO users (email, password, phone_number, address, full_name) VALUES (?,?,?,?,?)";
 
 				if($stmt = $mysqli->prepare($sql))
 				{
-					$stmt->bind_param("ss", $param_email, $param_password);
+					$stmt->bind_param("ss", $param_email, $param_password, $param_phone_number, $param_address, $param_full_name);
 
 					$param_email = $email;
+					$param_phone_number = $phone_number;
+					$param_address = $address;
+					$param_full_name = $full_name;
 					$param_password = password_hash($password,PASSWORD_DEFAULT);
 
 					if($stmt->execute())
@@ -123,6 +126,21 @@
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($phone_number_err)) ? 'has-error' : ''; ?>">
+                <label>Phone number</label>
+                <input type="number" name="phone_number" class="form-control" value="<?php echo $phone_number ?>">
+                <span class="help-block"><?php echo $phone_number_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
+                <label>Address</label>
+                <input type="text" name="address" class="form-control" value="<?php echo $address; ?>">
+                <span class="help-block"><?php echo $address_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($full_name_err)) ? 'has-error' : ''; ?>">
+                <label>Full Name</label>
+                <input type="text" name="full_name" class="form-control" value="<?php echo $full_name; ?>">
+                <span class="help-block"><?php echo $full_name_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
