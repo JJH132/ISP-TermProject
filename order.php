@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <script type = "text/javascript">
-
             function displaySecondTable() {
                 if(document.getElementById("myonoffswitch").checked == true){
                     document.getElementById("table2").style.display = "none";
@@ -11,7 +10,6 @@
                     document.getElementById("table2").style.display = "inline-block";
                 }
             }
-
       </script> 
         <title>[Untitled] Piza | Order</title>
         <meta name="description" content="">
@@ -20,7 +18,6 @@
     </head>
     <body>
         <?php include 'nav.php';?>
-
         <div align="center">
             Toppings for full pizza or half/half?
         <div class="onoffswitch" align="left">
@@ -33,7 +30,7 @@
     </div>
         <br>
         <form>
-        <table  class="inlineTable" id="table1">
+        <table class="inlineTable" id="table1">
             <tr>
                 <td>
                 <div class="toppingH">Cheese:</div> 
