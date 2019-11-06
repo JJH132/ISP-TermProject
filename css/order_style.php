@@ -1,7 +1,6 @@
 <?php
 header("Content-type: text/css");
 ?>
-
 /*FONTS
 font-family: 'Roboto', sans-serif;
 font-family: 'Montserrat Alternates', sans-serif;

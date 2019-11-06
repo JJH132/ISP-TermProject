@@ -307,7 +307,6 @@
                 </td>
             </tr><tr>
             </tr>
-
         </table>
 
         <?php include 'footer.php' ?>
