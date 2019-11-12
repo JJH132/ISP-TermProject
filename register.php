@@ -1,154 +1,47 @@
-<?php 
-	//include the config file
-	require "config.php";
-	$email = $password = $confirm_password = $phone_number = $address = $full_name = "";
-	$email_err = $password_err = $confirm_password_err = $phone_number_err = $address_err = $full_name_err = "";
-
-	if($_SERVER["REQUEST_METHOD"] == "POST")
-	{
-		if(empty(trim($_POST["email"])))
-		{
-			$email_err = "Please enter your email.";
-		}
-		else
-		{
-			$sql = "SELECT user_id FROM users WHERE email = ?";
-			if($stmt = $mysqli->prepare($sql))
-			{
-				$stmt->bind_param("s", $param_email);
-
-				$param_email = trim($_POST["email"]);
-
-				if($stmt->execute())
-				{
-					$stmt->store_result();
-
-					if($stmt->num_rows == 1)
-					{
-						$email_err = "Sorry, this email is already in use. Please try another.";
-					}
-					else
-					{
-						$email = trim($_POST["email"]);		
-					}
-				}
-				else
-				{
-					echo "Oopsy! Something went very wrong. Please try again later.";
-				}
-			
-			}	
-			
-
-				$stmt->close();
-		}
-			if(empty(trim($_POST["password"])))
-			{
-				$password_err = "Please enter your password.";
-			}
-			elseif (strlen(trim($_POST["password"])) < 6)
-			{
-				$password_err = "The password must be at least 6 characters long.";
-			}
-			else
-			{
-				$password = trim($_POST["password"]);
-			}
-
-			if(empty(trim($_POST["confirm_password"])))
-			{
-				$confirm_password_err = "Please confirm your password.";
-			}
-			else
-			{
-				$confirm_password = trim($_POST["confirm_password"]);
-				if(empty($password_err) && ($password != $confirm_password))
-				{
-					$confirm_password_err = "The passwords did not match. Please try again.";
-				}
-			}
-
-			if(empty($email_err) && empty($password_err) && empty($confirm_password_err) && empty($phone_number_err) && empty($address_err) && empty($full_name_err))
-			{
-				$sql = "INSERT INTO users (email, password, phone_number, address, full_name) VALUES (?,?,?,?,?)";
-
-				if($stmt = $mysqli->prepare($sql))
-				{
-					$stmt->bind_param("ss", $param_email, $param_password, $param_phone_number, $param_address, $param_full_name);
-
-					$param_email = $email;
-					$param_phone_number = $phone_number;
-					$param_address = $address;
-					$param_full_name = $full_name;
-					$param_password = password_hash($password,PASSWORD_DEFAULT);
-
-					if($stmt->execute())
-					{
-						header("location: login.php");
-					}
-					else
-					{
-						echo "Something went very wrong. Please try again later!";
-					}
-				}
-
-				$stmt->close();
-			}
-			$mysqli->close();
-		}
-?>
-<!DOCTYPE HTML>
+<?php include('server.php') ?>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>[Untitled] Pizza | Sign up </title>
-
-        <link rel="author" href="humans.txt">
-    </head>
-    <body>
-<div class="wrapper">
-        <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                <label>Email</label>
-                <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-                <span class="help-block"><?php echo $email_err; ?></span>
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($phone_number_err)) ? 'has-error' : ''; ?>">
-                <label>Phone number</label>
-                <input type="number" name="phone_number" class="form-control" value="<?php echo $phone_number ?>">
-                <span class="help-block"><?php echo $phone_number_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
-                <label>Address</label>
-                <input type="text" name="address" class="form-control" value="<?php echo $address; ?>">
-                <span class="help-block"><?php echo $address_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($full_name_err)) ? 'has-error' : ''; ?>">
-                <label>Full Name</label>
-                <input type="text" name="full_name" class="form-control" value="<?php echo $full_name; ?>">
-                <span class="help-block"><?php echo $full_name_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-default" value="Reset">
-            </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
-        </form>
-    </div>    
-    </body>
+<head>
+  <title>Registration system PHP and MySQL</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="header">
+  	<h2>Register</h2>
+  </div>
+	
+  <form method="post" action="register.php">
+  	<?php include('errors.php'); ?>
+  	<div class="input-group">
+  	  <label>Email</label>
+  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	</div>
+  	<div class="input-group">
+  	  <label>Password</label>
+  	  <input type="password" name="password_1">
+  	</div>
+  	<div class="input-group">
+  	  <label>Confirm password</label>
+  	  <input type="password" name="password_2">
+  	</div>
+    <div class="input-group">
+      <label>Phone Number</label>
+      <input type="text" name="phone_number" value="<?php echo $phone_number; ?>">
+    </div>
+    <div class="input-group">
+      <label>Address</label>
+      <input type="text" name="address" value="<?php echo $address; ?>">
+    </div>
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" name="full_name" value="<?php echo $full_name; ?>">
+    </div>
+  	<div class="input-group">
+  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  	</div>
+  	<p>
+  		Already a member? <a href="login.php">Sign in</a>
+  	</p>
+  </form>
+</body>
 </html>
-
