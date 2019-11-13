@@ -1,14 +1,29 @@
 <?php
-header("Content-type: text/css");
-$darkBrown = '#856850';
-$darkerBrown = '#705843';
-$lightBrown = '#B89B82';
-$lightGray = '#E3E3E3';
-$darkGray = '#C5C5C9';
-$darkerGray = '#646466';
-$almostBlack = '#3D3D3D';
-$lighterBrown = '#D9B79A';
+require '../config.php';
+{
+    $titleColor = colorScheme::getColorHexByColorName("titleColor");
+    $minorText = colorScheme::getColorHexByColorName("minorText");
+    $highlightMajor = colorScheme::getColorHexByColorName("highlightMajor");
+    $body = colorScheme::getColorHexByColorName("body");
+    $headColor = colorScheme::getColorHexByColorName("headColor");
+    $mainText = colorScheme::getColorHexByColorName("mainText");
+    $highlightMinor = colorScheme::getColorHexByColorName("highlightMinor");
+}
+# switch comment out code for localhost
+// {
+//     $titleColor = '#856850';
+//     $minorText = '#705843';
+//     $highlightMajor = '#B89B82';
+//     $body = '#E3E3E3';
+//     $headColor = '#C5C5C9';
+//     $mainText = '#3D3D3D';
+//     $highlightMinor = '#D9B79A';
+// }
+
+
+
 ?>
+<?php header("Content-type: text/css"); ?>
 /*FONTS
 font-family: 'Roboto', sans-serif;
 font-family: 'Montserrat Alternates', sans-serif;
@@ -16,14 +31,14 @@ font-family: 'Montserrat Alternates', sans-serif;
 
 
 nav{
-    background-color: <?=$darkGray?>;
+    background-color: <?=$headColor?>;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid <?=$lightBrown?>;
+    border-bottom: 2px solid <?=$highlightMajor?>;
 }
 
 .home_link a{
-    color: <?=$darkBrown?>;
+    color: <?=$titleColor?>;
     font-family: 'Montserrat Alternates', sans-serif;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -33,11 +48,11 @@ nav{
 }
 
 .home_link a:hover {
-    color: <?=$almostBlack?>;
+    color: <?=$mainText?>;
 }
 
 footer {
-    background-color: <?=$lightBrown?>;
+    background-color: <?=$highlightMajor?>;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -45,7 +60,7 @@ footer {
 
 body{
     margin: 0;
-    background-color: <?=$lightGray?>;
+    background-color: <?=$body?>;
 }
 
 .home_link h1, img{
@@ -58,7 +73,7 @@ body{
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: bold;
-    color: <?=$lightBrown?>;
+    color: <?=$highlightMajor?>;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -ms-transition: all 0.4s;
@@ -67,18 +82,18 @@ body{
 }
 
 .rightNavLinks:hover {
-    color: <?=$darkerGray?>;
+    color: <?=$mainText?>;
 }
 
 .footerRight {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: <?=$darkerBrown?>;
+    color: <?=$minorText?>;
 }
 
 .footerRight a {
     text-decoration: none;
-    color: <?=$almostBlack?>;
+    color: <?=$mainText?>;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -ms-transition: all 0.4s;
@@ -86,14 +101,14 @@ body{
     transition: all 0.4s;
 }
 .footerRight a:hover {
-    color: <?=$darkBrown?>;
+    color: <?=$titleColor?>;
 }
 
 .footerLeft {
     margin-top: auto;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: <?=$lighterBrown?>;
+    color: <?=$highlightMinor?>;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -ms-transition: all 0.4s;
@@ -102,5 +117,11 @@ body{
 }
 
 .footerLeft:hover {
-    color: <?=$darkBrown?>
+    color: <?=$titleColor?>
+}
+
+.mainContainer {
+    width: 80%;
+    margin: auto;
+    padding: 5% 0 5% 0;
 }
