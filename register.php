@@ -16,6 +16,10 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
   if (!$conn) {
       echo "connection failed";
   }
+  else
+  {
+    echo "connection success";
+  }
 
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
@@ -32,7 +36,7 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
      if ($rnum==0) {
       $stmt->close();
       $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("ssssii", $email, $password, $phone_number, $address, $full_name);
+      $stmt->bind_param("sssss", $email, $password, $phone_number, $address, $full_name);
       $stmt->execute();
       echo "New record inserted sucessfully";
      } else {
