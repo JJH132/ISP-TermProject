@@ -9,13 +9,18 @@
   if (!$link) {
       echo "connection failed";
   }
-  echo "Connected successfully";
+
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
+    $phone_number = $_POST["phone_number"];
+    $address = $_POST["address"];
+    $full_name = $_POST["full_name"];
+    $email_err = $password_err = $confirm_password_err = $phone_number_err = $address_err = $full_name_err = "";
 
 
 
 
-  $email = $password = $confirm_password = $phone_number = $address = $full_name = "";
-  $email_err = $password_err = $confirm_password_err = $phone_number_err = $address_err = $full_name_err = "";
 
   if($_SERVER["REQUEST_METHOD"] == "POST")
   {
