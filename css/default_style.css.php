@@ -1,13 +1,14 @@
 <?php
-header("Content-type: text/css");
-$titleColor = '#856850';
-$miniorText = '#705843';
-$highlightMajor = '#B89B82';
-$body = '#E3E3E3';
-$headColor = '#C5C5C9';
-$mainText = '#3D3D3D';
-$highlightMinor = '#D9B79A';
+require '../config.php';
+$titleColor = colorScheme::getColorHexByColorName("titleColor");
+$minorText = colorScheme::getColorHexByColorName("minorText");
+$highlightMajor = colorScheme::getColorHexByColorName("highlightMajor");
+$body = colorScheme::getColorHexByColorName("body");
+$headColor = colorScheme::getColorHexByColorName("headColor");
+$mainText = colorScheme::getColorHexByColorName("mainText");
+$highlightMinor = colorScheme::getColorHexByColorName("highlightMinor");
 ?>
+<?php header("Content-type: text/css"); ?>
 /*FONTS
 font-family: 'Roboto', sans-serif;
 font-family: 'Montserrat Alternates', sans-serif;
@@ -72,7 +73,7 @@ body{
 .footerRight {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: <?=$miniorText?>;
+    color: <?=$minorText?>;
 }
 
 .footerRight a {
@@ -102,4 +103,10 @@ body{
 
 .footerLeft:hover {
     color: <?=$titleColor?>
+}
+
+.mainContainer {
+    width: 80%;
+    margin: auto;
+    padding: 5% 0 5% 0;
 }

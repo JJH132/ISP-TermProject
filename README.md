@@ -35,3 +35,12 @@ Websites and resources to implement future features:
         Shopping Cart tutorial
         
 If any of you guys wanna do one of these, that'd we awesome. I wanna do one of them and I will if one of you don't before me.
+
+# default colors
+	titleColor : #856850
+	minorText : #705843
+	highlightMajor : #B89B82
+	body : #E3E3E3
+	headColor : #C5C5C9
+	mainText : #3D3D3D
+	highlightMinor : #D9B79A
