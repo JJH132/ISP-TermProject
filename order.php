@@ -1,9 +1,20 @@
 <?php
-    $halfOrFull = $_GET["onoffswitch"];
-    $order = "";
-    if($halfOrFull == "HALF"){
-        $order .= "HALF: ";
-        
+
+    if(isset($_POST['submit'])){
+        $halfOrFull = "";
+        if(isset($_POST['onoffswitch'])){
+            $halfOrFull = $_POST['onoffswitch'];
+        }
+       
+        $order = "";
+        if($halfOrFull != "on"){
+            $order .= "HALF: ";
+            echo($order);
+        }
+        else {
+            $order .= "FULL: ";
+            echo($order);
+        }
     }
 ?>
 
@@ -27,18 +38,19 @@
     </head>
     <body>
         <?php include 'nav.php';?>
-        <div align="center">
-                Toppings for full pizza or half/half?
-            <div class="onoffswitch" align="left">
-                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked onclick="displaySecondTable()">
-                <label class="onoffswitch-label" for="myonoffswitch">
-                    <span class="onoffswitch-inner"></span>
-                    <span class="onoffswitch-switch"></span>
-                </label>
+        <form method="post">
+            <div align="center">
+
+                    Toppings for full pizza or half/half?
+                <div class="onoffswitch" align="left">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked onclick="displaySecondTable()">
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                </div>
             </div>
-        </div>
         <br>
-        <form>
         <table class="inlineTable" id="table1">
             <tr>
                 <td>
@@ -318,7 +330,8 @@
             </tr>
         </table>
         <br>
-        <input type="submit" value="submit">
+        <input type="submit" name="submit" value="submit">
+    </form>
         <?php include 'footer.php' ?>
         
         <script src="js/main.js"></script>
