@@ -25,7 +25,7 @@
         </div>
         <span id="sign_up">
 
-                     <a href="register.php"><b>Don't Have an Account?</b></a>
+                     <a href="register_form.php"><b>Don't Have an Account?</b></a>
                         <br>
 
         </span>
