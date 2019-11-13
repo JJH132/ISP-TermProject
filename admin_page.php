@@ -79,13 +79,13 @@
 
     <div class="mainContainer">
     	<form action="" method="post">
-    		<input type="text" minlength="7" name="titleColor" placeholder="#856850">
-            <input type="text" minlength="7" name="minorText" placeholder="#705843">
-            <input type="text" minlength="7" name="highlightMajor" placeholder="#B89B82">
-            <input type="text" minlength="7" name="body" placeholder="#E3E3E3">
-            <input type="text" minlength="7" name="headColor" placeholder="#C5C5C9">
-            <input type="text" minlength="7" name="mainText" placeholder="#3D3D3D">
-            <input type="text" minlength="7" name="highlightMinor" placeholder="#D9B79A">
+    		<input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="titleColor" placeholder="#856850" value="<?=colorScheme::getByColor_Name('titleColor')->color_hex;?>">
+            <input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="minorText" placeholder="#705843" value="<?=colorScheme::getByColor_Name('minorText')->color_hex;?>" >
+            <input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="highlightMajor" placeholder="#B89B82" value="<?=colorScheme::getByColor_Name('highlightMajor')->color_hex;?>" >
+            <input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="body" placeholder="#E3E3E3" value="<?=colorScheme::getByColor_Name('body')->color_hex;?>" >
+            <input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="headColor" placeholder="#C5C5C9" value="<?=colorScheme::getByColor_Name('headColor')->color_hex;?>" >
+            <input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="mainText" placeholder="#3D3D3D" value="<?=colorScheme::getByColor_Name('mainText')->color_hex;?>" >
+            <input type="text" onfocus="this.value='#'" maxlength="7" minlength="7" name="highlightMinor" placeholder="#D9B79A" value="<?=colorScheme::getByColor_Name('highlightMinor')->color_hex;?>" >
     		<input type="submit" name="save" value="Save Changes">
             <input type="submit" name="restore" value="Restore Defaults">
     	</form>
