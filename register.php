@@ -1,6 +1,18 @@
 <?php 
   //include the config file
-  require_once "config.php";
+
+
+
+$link = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+// Check connection
+if (!$link) {
+    echo "connection failed";
+}
+echo "Connected successfully";
+
+
+
+
   $email = $password = $confirm_password = $phone_number = $address = $full_name = "";
   $email_err = $password_err = $confirm_password_err = $phone_number_err = $address_err = $full_name_err = "";
 
