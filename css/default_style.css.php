@@ -12,7 +12,7 @@ require '../config.php';
 # switch comment out code for localhost
 // {
 //     $titleColor = '#856850';
-//     $minorText = '#705843';
+//     $3...........................3.......orText = '#705843';
 //     $highlightMajor = '#B89B82';
 //     $body = '#E3E3E3';
 //     $headColor = '#C5C5C9';
