@@ -76,7 +76,7 @@
           $param_password = password_hash($password,PASSWORD_DEFAULT);
           if(mysqli_stmt_execute($stmt))
           {
-            header("location: login.php");
+            header("location: index.php");
           }
           else
           {
