@@ -21,7 +21,7 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
      $SELECT = "SELECT email From users Where email = ? Limit 1";
-     $INSERT = "INSERT Into register (email, password, phone_number, address, full_name) values(?, ?, ?, ?, ?)";
+     $INSERT = "INSERT Into users (email, password, phone_number, address, full_name) values(?, ?, ?, ?, ?)";
      //Prepare statement
      $stmt = $conn->prepare($SELECT);
      $stmt->bind_param("s", $email);
@@ -36,7 +36,7 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
       $stmt->execute();
       echo "New record inserted sucessfully";
      } else {
-      echo "Someone already register using this email";
+      echo "Someone already registered using this email";
      }
      $stmt->close();
      $conn->close();
