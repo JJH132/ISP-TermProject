@@ -26,9 +26,8 @@ class colorScheme
          // Check connection
          if (!$conn) {
              echo "connection failed";
-         }
-         echo "Connected successfully";         
-          $sql = "SELECT * FROM colors WHERE color_name = '$color_name'";
+         }    
+          $sql = "SELECT * FROM untitledpizza.colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
@@ -47,8 +46,7 @@ class colorScheme
      if (!$conn) {
          echo "connection failed";
      }
-     echo "Connected successfully";
-        $sql = "SELECT color_hex FROM colors WHERE color_name = '$color_name'";
+        $sql = "SELECT color_hex FROM untitledpizza.colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
@@ -70,10 +68,7 @@ class colorScheme
          if (!$conn) {
              echo "connection failed";
          }
-         else 
-          echo "Connected successfully";
-
-        $sql = "UPDATE colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
+        $sql = "UPDATE untitledpizza.colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
