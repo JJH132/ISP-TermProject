@@ -21,7 +21,6 @@ class colorScheme
         if ( isset( $data['color_hex'] ) ) $this->color_hex = $data['color_hex'];
     }
 
-
     public static function getByColor_Name( $color_name ) {
         $conn = mysqli_connect( SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME );
         $sql = "SELECT * FROM colors WHERE color_name = '$color_name'";
