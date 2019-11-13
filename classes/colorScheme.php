@@ -33,7 +33,7 @@ class colorScheme
         if(!$result)
         {
             print "Error - the query could not be executed";
-            $error = mysqli_error();
+            $error = mysqli_connect_error();
             print "<p>" . $error . "</p>";
             exit;
         }
@@ -53,7 +53,7 @@ class colorScheme
         if(!$result)
         {
             print "Error - the query could not be executed";
-            $error = mysqli_error();
+            $error = mysqli_connect_error();
             print "<p>" . $error . "</p>";
             exit;
         }
@@ -78,7 +78,7 @@ class colorScheme
         if(!$result)
         {
             print "Error - the query could not be executed";
-            $error = mysqli_error();
+            $error = mysqli_connect_error();
             print "<p>" . $error . "</p>";
             exit;
         }
