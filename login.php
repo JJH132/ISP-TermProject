@@ -2,10 +2,10 @@
   session_start();
   if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
   {
-    header("location: htmlHead.php");
+    header("location: index.php");
     exit;
   }
-  require_once "config.php";
+  require "config.php";
   $email = $password = "";
   $email_err = $password_err = "";
   if($_SERVER["REQUEST_METHOD"] == "POST")
