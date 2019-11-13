@@ -22,8 +22,13 @@ class colorScheme
     }
 
     public static function getByColor_Name( $color_name ) {
-        $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
-        $sql = "SELECT * FROM colors WHERE color_name = '$color_name'";
+         $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+         // Check connection
+         if (!$conn) {
+             echo "connection failed";
+         }
+         echo "Connected successfully";         
+          $sql = "SELECT * FROM colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
@@ -37,8 +42,12 @@ class colorScheme
     }
 
     public static function getColorHexByColorName($color_name) {
-        $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
-
+     $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+     // Check connection
+     if (!$conn) {
+         echo "connection failed";
+     }
+     echo "Connected successfully";
         $sql = "SELECT color_hex FROM colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
@@ -56,7 +65,13 @@ class colorScheme
         if (is_null($this->color_name)) trigger_error("colorScheme::update(): Attempt to update a colorScheme object that does not have its color_name set.");
 
         // Update color scheme 
-        $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+         $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+         // Check connection
+         if (!$conn) {
+             echo "connection failed";
+         }
+         else 
+          echo "Connected successfully";
 
         $sql = "UPDATE colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
         $result = mysqli_query($conn, $sql);
