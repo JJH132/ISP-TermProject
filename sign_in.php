@@ -20,8 +20,9 @@
                 		<td><b>Password:</b> <input type="Password" name="txt_pass" id="txt_pass"></td>
                 	</tr>
                 </table>
+                <button type="submit" id="sign_in_button" name="sign_in_button">Sign In</button>
             </form>
-        	<button type="submit" id="sign_in_button" name="sign_in_button">Sign In</button>
+
         </div>
         <span id="sign_up">
 
