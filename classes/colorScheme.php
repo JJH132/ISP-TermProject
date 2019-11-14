@@ -27,7 +27,7 @@ class colorScheme
          if (!$conn) {
              echo "connection failed";
          }    
-          $sql = "SELECT * FROM untitledpizza.colors WHERE color_name = '$color_name'";
+          $sql = "SELECT * FROM ebdb.colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
@@ -46,7 +46,7 @@ class colorScheme
      if (!$conn) {
          echo "connection failed";
      }
-        $sql = "SELECT color_hex FROM untitledpizza.colors WHERE color_name = '$color_name'";
+        $sql = "SELECT color_hex FROM ebdb.colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
@@ -68,7 +68,7 @@ class colorScheme
          if (!$conn) {
              echo "connection failed";
          }
-        $sql = "UPDATE untitledpizza.colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
+        $sql = "UPDATE ebdb.colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
