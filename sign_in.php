@@ -8,7 +8,7 @@
     <body>
         <?php include 'nav.php';?>
     	<div align="center" id="sign_in">
-            <form action="loginuser.php" method="post">
+            <form action="" method="post">
                 <table id="Sign_in_table" align="center">
                 	<tr>
                 		<td align="center"><h3>Existing user? Sign in!</h3></td>
