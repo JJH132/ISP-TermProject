@@ -1,14 +1,31 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[Untitled] Pizza | Home</title>
+    <meta name="description" content="">
+    <?php include 'htmlHead.php';?>
+</head>
+<body>
+    <?php include 'config.php' ?>
+
+    <?php include 'nav.php' ?>
+
+    <?php include 'footer.php' ?>
+</body>
+</html><!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>[Untitled] Pizza | Sign up </title>
 
-        <link rel="author" href="humans.txt">
+        <?php include 'htmlHead.php';?>
+
     </head>
     <body>
+    <?php include 'config.php' ?>
+    <?php include 'nav.php' ?>
+
 <div class="wrapper">
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
@@ -50,5 +67,7 @@
             <p>Already have an account? Login here.</p>
         </form>
     </div>    
+    <?php include 'footer.php' ?>
+
     </body>
 </html>
