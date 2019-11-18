@@ -348,7 +348,7 @@
 
         $INSERT = "INSERT Into users (past_orders) values(?)";
         $stmnt1 = $conn->prepare($INSERT);
-        $stmnt1->bind_param("s", $order_id);
+        $stmnt1->bind_param("i", $order_id);
         $stmnt1->execute();
 
 
