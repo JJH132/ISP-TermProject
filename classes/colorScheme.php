@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php  
 
 // Class for color scheme
@@ -81,7 +80,6 @@ class colorScheme
     }
 }
 
-=======
 <?php  
 
 // Class for color scheme
@@ -163,6 +161,4 @@ class colorScheme
         }
     }
 }
-
->>>>>>> 2cdb9b704473778b2915804aed815cf314442234
 ?>
