@@ -1,5 +1,4 @@
 <?php
-    session_start();
     if(isset($_POST['submit'])){
         $halfOrFull = "";
         if(isset($_POST['onoffswitch'])){
@@ -209,7 +208,7 @@
             $var = $_POST['jalapeno-peppers2'];
             $order .= $var;
 
-            echo($order);
+            //echo($order);
         }
         else {
             $order .= "FULL: ";
@@ -313,7 +312,7 @@
             $var = $_POST['jalapeno-peppers'];
             $order .= $var;
             $order .= " ";
-            echo($order);
+            //echo($order);
         }
         $currUser = $_SESSION['email'];
         $price = 5;
@@ -325,7 +324,7 @@
 
         $SELECT = "SELECT user_id FROM users WHERE email = ? LIMIT 1";
         $stmnt = $conn->prepare($SELECT);
-        $stmt->bind_param("s", $currUser);
+        $stmnt->bind_param("s", $currUser);
         $stmnt->execute();
         $stmnt->bind_result($currUser);
         $stmnt->store_result();
