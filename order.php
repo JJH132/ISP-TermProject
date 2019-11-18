@@ -346,9 +346,8 @@
         $r1 = $result1->fetch_array(MYSQLI_ASSOC);
         $orderId = $r1['order_id'];
 
-        $INSERT = "INSERT Into users (past_orders) values(?)";
-        $stmnt1 = $conn->prepare($INSERT);
-        $stmnt1->bind_param("i", $order_id);
+        $UPDATE = "UPDATE users SET past_orders=$order_id WHERE user_id=$user_id";
+        $stmnt1 = $conn->prepare($UPDATE);
         $stmnt1->execute();
 
 
