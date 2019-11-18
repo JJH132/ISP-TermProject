@@ -338,9 +338,9 @@
         $stmnt->execute();
 
 
-        $SELECT = "SELECT order_id FROM orders WHERE email = ? LIMIT 1";
+        $SELECT = "SELECT order_id FROM orders WHERE user_id = ? LIMIT 1";
         $stmnt1 = $conn->prepare($SELECT);
-        $stmnt1->bind_param("s", $currUser);
+        $stmnt1->bind_param("s", $userId);
         $stmnt1->execute();
         $result1 = $stmnt1->get_result();
         $r1 = $result1->fetch_array(MYSQLI_ASSOC);
