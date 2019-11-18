@@ -35,9 +35,7 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
       $stmt = $conn->prepare($INSERT);
       $stmt->bind_param("sssss", $email, $password, $phone_number, $address, $full_name);
       $stmt->execute();
-      header("Location: index.php"); 
-      alert("Successfully logged in.");
-    
+      header("Location: sign_in.php");     
      } else 
      {
       echo "Someone already registered using this email";
