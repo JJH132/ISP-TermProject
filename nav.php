@@ -7,9 +7,10 @@
     </div>
     <?php 
     session_start();
+    	echo '<a class="rightNavLinks" href="order.php">Order </a>';
     if(isset($_SESSION['email']))
 	    {
-	    	echo "Hello " . $_SESSION['email'] . ".<br>";;
+	    	echo "Hello " . $_SESSION['email'] . ".<br>";
 	    	echo '<a class="rightNavLinks" href="logout.php">Log out </a>';
 	    }
 	    else
