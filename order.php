@@ -339,21 +339,22 @@
 
 
         $SELECT = "SELECT order_id FROM orders WHERE email = ? LIMIT 1";
-        $stmnt = $conn->prepare($SELECT);
-        $stmnt->bind_param("s", $currUser);
-        $stmnt->execute();
-        $result1 = $stmnt->get_result();
+        $stmnt1 = $conn->prepare($SELECT);
+        $stmnt1->bind_param("s", $currUser);
+        $stmnt1->execute();
+        $result1 = $stmnt1->get_result();
         $r1 = $result1->fetch_array(MYSQLI_ASSOC);
         $orderId = $r1['order_id'];
 
         $INSERT = "INSERT Into users (past_orders) values(?)";
-        $stmnt = $conn->prepare($INSERT);
-        $stmnt->bind_param("s", $order_id);
-        $stmnt->execute();
+        $stmnt1 = $conn->prepare($INSERT);
+        $stmnt1->bind_param("s", $order_id);
+        $stmnt1->execute();
 
 
         $conn->close();
         $stmnt->close();
+        $stmnt1->close();
     }
 ?>
 
