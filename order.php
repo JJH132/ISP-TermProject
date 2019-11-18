@@ -327,9 +327,10 @@
         $stmnt = $conn->prepare($SELECT);
         $stmnt->bind_param("s", $currUser);
         $stmnt->execute();
-        $stmnt->bind_result($currUser);
-        $stmnt->store_result();
-        $userId = $stmnt["user_id"];
+        //$stmnt->bind_result($currUser);
+        $result = $stmnt->get_result();
+        $r = $result->fetch_array(MYSQLI_ASSOC);
+        $userId = $r['user_id'];
 
         $INSERT = "INSERT Into orders (details,price,estimated_completion,user_id) values(?,?,?,?)";
         $stmnt = $conn->prepare($INSERT);
