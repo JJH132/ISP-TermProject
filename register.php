@@ -16,10 +16,6 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
   if (!$conn) {
       echo "connection failed";
   }
-  else
-  {
-    echo "connection success";
-  }
 
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
@@ -33,13 +29,17 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
      $stmt->bind_result($email);
      $stmt->store_result();
      $rnum = $stmt->num_rows;
-     if ($rnum==0) {
+     if ($rnum==0) 
+     {
       $stmt->close();
       $stmt = $conn->prepare($INSERT);
       $stmt->bind_param("sssss", $email, $password, $phone_number, $address, $full_name);
       $stmt->execute();
-      echo "New record inserted sucessfully";
-     } else {
+      header("Location: index.php"); 
+      alert("Successfully logged in.")
+    exit;
+     } else 
+     {
       echo "Someone already registered using this email";
      }
      $stmt->close();
@@ -50,3 +50,4 @@ if (!empty($email) || !empty($password) || !empty($confirm_password) || !empty($
  die();
 }
 ?>
+
