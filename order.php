@@ -371,7 +371,7 @@
                 }
             }
       </script> 
-        <title>[Untitled] Piza | Order</title>
+        <title>[Untitled] Pizza | Order</title>
         <meta name="description" content="">
         <?php include 'htmlHead.php';?>
         <link rel="stylesheet" href="css/order_style.php">
