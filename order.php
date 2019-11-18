@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     if(isset($_POST['submit'])){
         $halfOrFull = "";
         if(isset($_POST['onoffswitch'])){
@@ -209,7 +209,7 @@
             $var = $_POST['jalapeno-peppers2'];
             $order .= $var;
 
-            //echo($order);
+            echo($order);
         }
         else {
             $order .= "FULL: ";
@@ -313,8 +313,31 @@
             $var = $_POST['jalapeno-peppers'];
             $order .= $var;
             $order .= " ";
-            //echo($order);
+            echo($order);
         }
+        $currUser = $_SESSION['email'];
+        $price = 5;
+        $dt = '2009-04-30 10:09:00';
+        $ec = "15 minutes";
+
+        $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+
+
+        $SELECT = "SELECT user_id FROM users WHERE email = ? LIMIT 1";
+        $stmnt = $conn->prepare($SELECT);
+        $stmt->bind_param("s", $currUser);
+        $stmnt->execute();
+        $stmnt->bind_result($currUser);
+        $stmnt->store_result();
+        $userId = $stmnt["user_id"];
+
+        $INSERT = "INSERT Into orders (details,price,estimated_completion,user_id) values(?,?,?,?)";
+        $stmnt = $conn->prepare($INSERT);
+        $stmnt->bind_param("sisi", $order, $price, $ec, $userId);
+        $stmnt->execute();
+
+        $conn->close();
+        $conn->close();
     }
 ?>
 
