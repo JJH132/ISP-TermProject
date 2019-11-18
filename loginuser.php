@@ -30,5 +30,17 @@
 
 	}
 
-
  ?>
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>[Untitled] Pizza | Home</title>
+    <meta name="description" content="">
+    <?php include 'htmlHead.php';?>
+</head>
+<body>
+    <?php include 'nav.php' ?>
+    <?php echo $_SESSION['email']; ?>
+    <?php include 'footer.php' ?>
+</body>
+</html>
