@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     if(isset($_POST['submit'])){
         $halfOrFull = "";
         if(isset($_POST['onoffswitch'])){
@@ -315,6 +315,45 @@
             $order .= " ";
             //echo($order);
         }
+        $currUser = $_SESSION['email'];
+        $price = 5;
+        $dt = '2009-04-30 10:09:00';
+        $ec = "15 minutes";
+
+        $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+
+
+        $SELECT = "SELECT user_id FROM users WHERE email = ? LIMIT 1";
+        $stmnt = $conn->prepare($SELECT);
+        $stmnt->bind_param("s", $currUser);
+        $stmnt->execute();
+        //$stmnt->bind_result($currUser);
+        $result = $stmnt->get_result();
+        $r = $result->fetch_array(MYSQLI_ASSOC);
+        $userId = $r['user_id'];
+
+        $INSERT = "INSERT Into orders (details,price,estimated_completion,user_id) values(?,?,?,?)";
+        $stmnt = $conn->prepare($INSERT);
+        $stmnt->bind_param("sisi", $order, $price, $ec, $userId);
+        $stmnt->execute();
+
+
+        $SELECT = "SELECT order_id FROM orders WHERE user_id = ? LIMIT 1";
+        $stmnt1 = $conn->prepare($SELECT);
+        $stmnt1->bind_param("s", $userId);
+        $stmnt1->execute();
+        $result1 = $stmnt1->get_result();
+        $r1 = $result1->fetch_array(MYSQLI_ASSOC);
+        $orderId = $r1['order_id'];
+
+        $UPDATE = "UPDATE users SET past_orders=".$orderId." WHERE user_id=".$userId."";
+        $stmnt1 = $conn->prepare($UPDATE);
+        $stmnt1->execute();
+
+
+        $conn->close();
+        $stmnt->close();
+        $stmnt1->close();
     }
 ?>
 
@@ -331,7 +370,7 @@
                 }
             }
       </script> 
-        <title>[Untitled] Piza | Order</title>
+        <title>[Untitled] Pizza | Order</title>
         <meta name="description" content="">
         <?php include 'htmlHead.php';?>
         <link rel="stylesheet" href="css/order_style.php">

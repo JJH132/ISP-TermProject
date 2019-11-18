@@ -44,3 +44,9 @@ If any of you guys wanna do one of these, that'd we awesome. I wanna do one of t
 	headColor : #C5C5C9
 	mainText : #3D3D3D
 	highlightMinor : #D9B79A
+	
+	
+	
+# Workbench connection
+	hostname: aa148fg0lsw80en.cnb1cjruxnbc.us-east-2.rds.amazonaws.com
+	port: 3306
