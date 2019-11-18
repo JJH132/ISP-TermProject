@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <nav>
     <div class="home_link">
     <a style="text-decoration: none;" href="index.php">
@@ -8,7 +7,6 @@
     </a>
     </div>
     <a class="rightNavLinks" href="sign_in.php">Sign in</a>
-=======
 <nav>
     <div class="home_link">
     <a style="text-decoration: none;" href="index.php">
@@ -29,5 +27,4 @@
 
     }
     ?>
->>>>>>> 2cdb9b704473778b2915804aed815cf314442234
 </nav>
