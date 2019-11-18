@@ -12,7 +12,7 @@
     <?php include 'nav.php' ?>
     <h1 style="color: #3D3D3D;">Untitled Pizza Home</h1>
 
-    <a href="order.php">ORDER LINK</a>
+    <a href="order.php"><button>ORDER LINK</button></a>
 
 
     <br>
