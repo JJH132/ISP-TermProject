@@ -1,5 +1,5 @@
 <?php 
-
+	session_start();
     $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
 
 	if(isset($_POST['txt_email']) && isset($_POST['txt_pass']))
