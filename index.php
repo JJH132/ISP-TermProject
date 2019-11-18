@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +19,6 @@
     <?php include 'footer.php' ?>
 </body>
 </html>
-=======
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,4 +40,3 @@
     <?php include 'footer.php' ?>
 </body>
 </html>
->>>>>>> 2cdb9b704473778b2915804aed815cf314442234
