@@ -337,8 +337,23 @@
         $stmnt->bind_param("sisi", $order, $price, $ec, $userId);
         $stmnt->execute();
 
+
+        $SELECT = "SELECT order_id FROM orders WHERE email = ? LIMIT 1";
+        $stmnt = $conn->prepare($SELECT);
+        $stmnt->bind_param("s", $currUser);
+        $stmnt->execute();
+        $result1 = $stmnt->get_result();
+        $r1 = $result1->fetch_array(MYSQLI_ASSOC);
+        $orderId = $r1['order_id'];
+
+        $INSERT = "INSERT Into users (past_orders) values(?)";
+        $stmnt = $conn->prepare($INSERT);
+        $stmnt->bind_param("s", $order_id);
+        $stmnt->execute();
+
+
         $conn->close();
-        $conn->close();
+        $stmnt->close();
     }
 ?>
 
