@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	$currUser = $_SESSION['email'];
 
 	$conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
@@ -17,7 +16,7 @@
         $address = $r['address'];
         $full_name = $r['full_name'];
         $past_orders = $r['past_orders'];
-        $datacreated = $r['created_at'];
+        $datecreated = $r['created_at'];
 
 
 
@@ -49,13 +48,13 @@
     <br>
     Current Password: <br> <?php echo $password; ?>
     <br>
-    Phone Number: <br> <?php echo $phone_number; ?>
+    Phone Number: <br> <?php echo $phone; ?>
     <br>
     Address: <br> <?php echo $address; ?>
     <br>
     Past Orders (by order id): <br> <?php echo $past_orders; ?>
     <br>
-    Date Account Created: <br> <?php echo $datacreated; ?>
+    Date Account Created: <br> <?php echo $datecreated; ?>
     <br>
 
 
