@@ -8,7 +8,7 @@
 		$stmnt = $conn->prepare($SELECT);
         $stmnt->bind_param("s", $currUser);
         $stmnt->execute();
-        $result = $stmt->get_result();
+        $result = $stmnt->get_result();
         $r = $result->fetch_array(MYSQLI_ASSOC);
         $userId = $r['user_id'];
         $currUser = $r['email'];
@@ -45,7 +45,7 @@
 
     Name: <br> <?php echo $full_name; ?>
     <br>
-    User ID: <br> <?php echo $userId ?>
+    User ID: <br> <?php echo $userId; ?>
     <br>
     Current Password: <br> <?php echo $password; ?>
     <br>
