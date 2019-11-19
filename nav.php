@@ -21,6 +21,7 @@
 	    }
 	    else
 	    {
+	    	echo '<a class="rightNavLinks" href="register_form.php">Sign up</a>';
 	    	echo '<a class="rightNavLinks" href="sign_in.php">Sign in</a>';
 
 	    }
