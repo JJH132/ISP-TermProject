@@ -8,8 +8,7 @@
 <body>
     <?php include 'nav.php' ?>
 
-    <?php  
-    require 'config.php';
+    <?php require 'config.php';
 
     # Set New Colors
     if (isset($_POST['save'])) {
