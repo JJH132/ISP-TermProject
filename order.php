@@ -370,9 +370,9 @@
                 }
             }
       </script> 
-        <title>[Untitled] Pizza | Order</title>
-        <meta name="description" content="">
         <?php include 'htmlHead.php';?>
+        <title><?=$companyName->contents?> | Order</title>
+        <meta name="description" content="">
         <link rel="stylesheet" href="css/order_style.php">
     </head>
     <body>
