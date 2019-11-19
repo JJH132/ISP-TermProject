@@ -6,7 +6,10 @@
     </a>
     </div>
     <?php 
-    session_start();
+    if(!isset($_SESSION))
+    {
+    	    session_start();
+    }
     	echo '<a class="rightNavLinks" href="order.php">Order </a>';
     	echo '<a class="rightNavLinks" href="aboutus.php">About Us</a>';
     	echo '<a class="rightNavLinks" href="contactus.php">Contact Us</a>';
