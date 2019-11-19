@@ -22,13 +22,17 @@ class colorScheme
     }
 
     public static function getByColor_Name( $color_name ) {
-        $conn = mysqli_connect( SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME );
-        $sql = "SELECT * FROM colors WHERE color_name = '$color_name'";
+         $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+         // Check connection
+         if (!$conn) {
+             echo "connection failed";
+         }    
+          $sql = "SELECT * FROM ebdb.colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
             print "Error - the query could not be executed";
-            $error = mysqli_error();
+            $error = mysqli_connect_error();
             print "<p>" . $error . "</p>";
             exit;
         }
@@ -37,13 +41,17 @@ class colorScheme
     }
 
     public static function getColorHexByColorName($color_name) {
-        $conn  = mysqli_connect( SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        $sql = "SELECT color_hex FROM colors WHERE color_name = '$color_name'";
+     $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+     // Check connection
+     if (!$conn) {
+         echo "connection failed";
+     }
+        $sql = "SELECT color_hex FROM ebdb.colors WHERE color_name = '$color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
             print "Error - the query could not be executed";
-            $error = mysqli_error();
+            $error = mysqli_connect_error();
             print "<p>" . $error . "</p>";
             exit;
         }
@@ -55,13 +63,17 @@ class colorScheme
         if (is_null($this->color_name)) trigger_error("colorScheme::update(): Attempt to update a colorScheme object that does not have its color_name set.");
 
         // Update color scheme 
-        $conn  = mysqli_connect( SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        $sql = "UPDATE colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
+         $conn = mysqli_connect($_SERVER['RDS_HOSTNAME'], $_SERVER['RDS_USERNAME'], $_SERVER['RDS_PASSWORD'], $_SERVER['RDS_DB_NAME'], $_SERVER['RDS_PORT']);
+         // Check connection
+         if (!$conn) {
+             echo "connection failed";
+         }
+        $sql = "UPDATE ebdb.colors SET color_hex='$this->color_hex' WHERE color_name = '$this->color_name'";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
             print "Error - the query could not be executed";
-            $error = mysqli_error();
+            $error = mysqli_connect_error();
             print "<p>" . $error . "</p>";
             exit;
         }
