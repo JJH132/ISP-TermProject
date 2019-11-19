@@ -39,8 +39,6 @@ session_start();
     <?php include 'htmlHead.php';?>
 </head>
 <body>
-    <?php include 'config.php' ?>
-
     <?php include 'nav.php' ?>
 
     Name: <br> <?php echo $full_name; ?>
