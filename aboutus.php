@@ -6,7 +6,6 @@
     <?php include 'htmlHead.php'?>
 </head>
 <body>
-    <?php include 'config.php' ?>
 
     <?php include 'nav.php' ?>
 
