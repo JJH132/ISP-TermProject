@@ -8,6 +8,7 @@ define( "DB_PASSWORD", "admin" );
 define( "CLASS_PATH", "classes" );
 define( "TEMPLATE_PATH", "templates" );
 require( CLASS_PATH . "/colorScheme.php" );
+require( CLASS_PATH . "/elements.php" );
 
 function handleException( $exception ) {
   echo "Sorry, a problem occurred. Please try later.";

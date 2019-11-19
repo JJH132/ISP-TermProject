@@ -61,6 +61,7 @@ footer {
 body{
     margin: 0;
     background-color: <?=$body?>;
+    color: <?=$mainText?>;
 }
 
 .home_link h1, img{
@@ -121,7 +122,17 @@ body{
 }
 
 .mainContainer {
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding: 5% 0 5% 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.flex-container > div {
+  margin: 3px;
+  line-height: 1.3;
 }

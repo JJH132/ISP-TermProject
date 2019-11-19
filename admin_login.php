@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>[Untitled] Pizza | Administrator Page</title>
+	<?php include 'htmlHead.php';?>
+    <title><?=$companyName->contents?> | Administrator Page</title>
     <meta name="description" content="">
-    <?php include 'htmlHead.php';?>
 </head>
 <body>
     <?php include 'nav.php' ?>
