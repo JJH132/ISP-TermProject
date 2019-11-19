@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>[Untitled] Pizza | Login</title>
-        <meta name="description" content="">
         <?php include 'htmlHead.php';?>
+        <title><?=$companyName->contents?> | Login</title>
+        <meta name="description" content="">
     </head>
     <body>
         <?php include 'nav.php';?>

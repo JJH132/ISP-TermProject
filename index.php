@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>[Untitled] Pizza | Home</title>
+	<?php include 'htmlHead.php';?>
+    <title><?=$companyName->contents?> | Home</title>
     <meta name="description" content="">
-    <?php include 'htmlHead.php';?>
 </head>
 <body>
-    <?php include 'config.php' ?>
 
     <?php include 'nav.php' ?>
     <h1 style="color: #3D3D3D;">Untitled Pizza Home</h1>
