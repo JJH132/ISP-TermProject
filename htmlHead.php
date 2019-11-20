@@ -7,7 +7,7 @@
 <?php 
 {
 $companyName = elements::getByName("company_name"); 
-$icon = elements::getByName("icon_file_path")
+$icon = elements::getByName("icon_file_path");
 $footerCode = elements::getByName("footer_text");
 $companyName = elements::getByName("company_name");
 }
