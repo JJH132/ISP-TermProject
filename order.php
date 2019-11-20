@@ -660,6 +660,7 @@
             </tr><tr>
                 <td>
                     <div class="toppingH"> Other Sides: </div>
+                    <br>
                 </td>
                 <td> <div class="topping">Breadsticks </div> </td><td>
                     <input type="radio" name="breadsticks" value="none" checked> None 
