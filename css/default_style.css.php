@@ -1,24 +1,24 @@
 <?php
 require '../config.php';
-{
-    $titleColor = colorScheme::getColorHexByColorName("titleColor");
-    $minorText = colorScheme::getColorHexByColorName("minorText");
-    $highlightMajor = colorScheme::getColorHexByColorName("highlightMajor");
-    $body = colorScheme::getColorHexByColorName("body");
-    $headColor = colorScheme::getColorHexByColorName("headColor");
-    $mainText = colorScheme::getColorHexByColorName("mainText");
-    $highlightMinor = colorScheme::getColorHexByColorName("highlightMinor");
-}
-// # switch comment out code for localhost
 // {
-//     $titleColor = '#856850';
-//     $minorText = '#705843';
-//     $highlightMajor = '#B89B82';
-//     $body = '#E3E3E3';
-//     $headColor = '#C5C5C9';
-//     $mainText = '#3D3D3D';
-//     $highlightMinor = '#D9B79A';
+//     $titleColor = colorScheme::getColorHexByColorName("titleColor");
+//     $minorText = colorScheme::getColorHexByColorName("minorText");
+//     $highlightMajor = colorScheme::getColorHexByColorName("highlightMajor");
+//     $body = colorScheme::getColorHexByColorName("body");
+//     $headColor = colorScheme::getColorHexByColorName("headColor");
+//     $mainText = colorScheme::getColorHexByColorName("mainText");
+//     $highlightMinor = colorScheme::getColorHexByColorName("highlightMinor");
 // }
+# switch comment out code for localhost
+{
+    $titleColor = '#856850';
+    $minorText = '#705843';
+    $highlightMajor = '#B89B82';
+    $body = '#E3E3E3';
+    $headColor = '#C5C5C9';
+    $mainText = '#3D3D3D';
+    $highlightMinor = '#D9B79A';
+}
 
 
 
