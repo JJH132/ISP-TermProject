@@ -9,7 +9,7 @@ require '../config.php';
     $mainText = colorScheme::getColorHexByColorName("mainText");
     $highlightMinor = colorScheme::getColorHexByColorName("highlightMinor");
 }
-# switch comment out code for localhost
+// # switch comment out code for localhost
 // {
 //     $titleColor = '#856850';
 //     $minorText = '#705843';

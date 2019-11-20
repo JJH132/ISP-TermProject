@@ -1,10 +1,3 @@
-<?php 
-
-$footerCode = elements::getByName("footer_text");
-$companyName = elements::getByName("company_name");
-
-?>
-
 <footer>
     <div class="footerRight">
         <?=$footerCode->contents?>

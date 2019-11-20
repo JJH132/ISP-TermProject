@@ -1,10 +1,3 @@
-<?php 
-
-$titleCode = elements::getByName("title_text");
-$icon = elements::getByName("icon_file_path");
-
-?>
-
 <nav>
     <div class="home_link">
     <a style="text-decoration: none;" href="index.php">    
