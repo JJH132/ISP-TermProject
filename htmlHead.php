@@ -10,6 +10,7 @@ $companyName = elements::getByName("company_name");
 $icon = elements::getByName("icon_file_path");
 $footerCode = elements::getByName("footer_text");
 $companyName = elements::getByName("company_name");
+$titleCode = elements::getByName("title_text");
 }
 # comment out upper block for localhost DO NOT COMMIT
 // {
