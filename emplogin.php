@@ -24,7 +24,7 @@
 
 				$SELECT = "SELECT privileges FROM employees WHERE username = ? LIMIT 1";
 		        $stmnt = $conn->prepare($SELECT);
-		        $stmnt->bind_param("i", $usr);
+		        $stmnt->bind_param("s", $usr);
 		        $stmnt->execute();
 		        //$stmnt->bind_result($currUser);
 		        $result = $stmnt->get_result();
@@ -55,7 +55,7 @@
     <?php include 'footer.php' ?>
     <?php
     $currPrivs = $_SESSION['privileges'];
-    if($currPrivs == 1)
+    if($currPrivs == '1')
     {
     	echo 'Your current privileges are ';
     	echo $currPrivs;
@@ -63,7 +63,7 @@
     	 header("Location: admin_page.php");     
 
     }
-    else if($currPrivs == 0)
+    else if($currPrivs == '0')
     {
     	echo 'Your current privileges are ';
     	echo $currPrivs;
@@ -79,9 +79,6 @@
 		    print "<p>" . $error . "</p>";
 		    exit;
 		}
-
-
-
 
 		$num_rows = mysqli_num_rows($result);
 		print "<table><caption> <h2> All Orders ($num_rows) </h2> </caption>";
