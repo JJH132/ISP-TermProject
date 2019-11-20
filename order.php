@@ -287,6 +287,7 @@
             $var = $_POST['jalapeno-peppers2'];
             if($var != "none"){
                 $order .= $var;
+            }
 
             //echo($order);
         }
