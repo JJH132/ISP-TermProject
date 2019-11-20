@@ -289,6 +289,12 @@
                 $order .= $var;
             }
 
+            $var = $_POST['breadsticks'];
+            if($var != "none"){
+                $order .= "BREADSTICKS: ";
+                $order .= $var;
+            }
+
             //echo($order);
         }
         else {
@@ -432,6 +438,12 @@
                 $order .= "JALAPENO PEPPERS: ";
                 $order .= $var;
                 $order .= " ";
+            }
+
+            $var = $_POST['breadsticks'];
+            if($var != "none"){
+                $order .= "BREADSTICKS: ";
+                $order .= $var;
             }
             //echo($order);
         }
@@ -646,6 +658,14 @@
                     <input type="radio" name="jalapeno-peppers" value="full"> Full 
                 </td>
             </tr><tr>
+                <td>
+                    <div class="toppingH"> Other Sides: </div>
+                </td>
+                <td> <div class="topping">Breadsticks </div> </td><td>
+                    <input type="radio" name="breadsticks" value="none" checked> None 
+                </td><td>
+                    <input type="radio" name="breadsticks" value="full"> Yes 
+                </td>
             </tr>
 
         </table>
