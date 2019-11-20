@@ -17,135 +17,135 @@
                 $order .= ", ";
             }
 
-            $order .= "PEPPERONI: ";
             $var = $_POST['pepperoni'];
             if($var != "none"){
+                $order .= "PEPPERONI: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "HAM: ";
             $var = $_POST['ham'];
             if($var != "none"){
+                $order .= "HAM: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BACON: ";
             $var = $_POST['bacon'];
             if($var != "none"){
+                $order .= "BACON: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SAUSAGE: ";
             $var = $_POST['sausage'];
             if($var != "none"){
+                $order .= "SAUSAGE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SALAMI: ";
             $var = $_POST['salami'];
             if($var != "none"){
                 $order .= $var;
                 $order .= ", ";
+                $order .= "SALAMI: ";
             }
 
-            $order .= "BEEF: ";
             $var = $_POST['beef'];
             if($var != "none"){
                 $order .= $var;
                 $order .= ", ";
+                $order .= "BEEF: ";
             }
 
-            $order .= "Anchovies: ";
             $var = $_POST['anchovies'];
             if($var != "none"){
                 $order .= $var;
                 $order .= ", ";
+                $order .= "Anchovies: ";
             }
 
-            $order .= "Chicken: ";
             $var = $_POST['chicken'];
             if($var != "none"){
                 $order .= $var;
                 $order .= ", ";
+                $order .= "Chicken: ";
             }
 
-            $order .= "PORK: ";
             $var = $_POST['pork'];
             if($var != "none"){
+                $order .= "PORK: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "PINEAPPLE: ";
             $var = $_POST['pineapple'];
             if($var != "none"){
+                $order .= "PINEAPPLE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "MUSHROOMS: ";
             $var = $_POST['mushrooms'];
             if($var != "none"){
+                $order .= "MUSHROOMS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "ONIONS: ";
             $var = $_POST['onions'];
             if($var != "none"){
+                $order .= "ONIONS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "HOT SAUCE: ";
             $var = $_POST['hot-sauce'];
             if($var != "none"){
+                $order .= "HOT SAUCE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SPINACH: ";
             $var = $_POST['spinach'];
             if($var != "none"){
+                $order .= "SPINACH: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "TOMATOES: ";
             $var = $_POST['tomatoes'];
             if($var != "none"){
+                $order .= "TOMATOES: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "OLIVES: ";
             $var = $_POST['olives'];
             if($var != "none"){
+                $order .= "OLIVES: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BANANA PEPPERS: ";
             $var = $_POST['banana-peppers'];
             if($var != "none"){
+                $order .= "BANANA PEPPERS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "RED PEPPERS: ";
             $var = $_POST['red-peppers'];
             if($var != "none"){
+                $order .= "RED PEPPERS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "JALAPENO PEPPERS: ";
             $var = $_POST['jalapeno-peppers'];
             if($var != "none"){
+                $order .= "JALAPENO PEPPERS: ";
                 $order .= $var;
                 $order .= "       HALF: ";
             }
@@ -157,135 +157,135 @@
                 $order .= ", ";
             }
 
-            $order .= "PEPPERONI: ";
             $var = $_POST['pepperoni2'];
             if($var != "none"){
+                $order .= "PEPPERONI: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "HAM: ";
             $var = $_POST['ham2'];
             if($var != "none"){
+                $order .= "HAM: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BACON: ";
             $var = $_POST['bacon2'];
             if($var != "none"){
+                $order .= "BACON: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SAUSAGE: ";
             $var = $_POST['sausage2'];
             if($var != "none"){
+                $order .= "SAUSAGE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SALAMI: ";
             $var = $_POST['salami2'];
             if($var != "none"){
+                $order .= "SALAMI: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BEEF: ";
             $var = $_POST['beef2'];
             if($var != "none"){
+                $order .= "BEEF: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "Anchovies: ";
             $var = $_POST['anchovies2'];
             if($var != "none"){
+                $order .= "Anchovies: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "Chicken: ";
             $var = $_POST['chicken2'];
             if($var != "none"){
+                $order .= "Chicken: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "PORK: ";
             $var = $_POST['pork2'];
             if($var != "none"){
+                $order .= "PORK: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "PINEAPPLE: ";
             $var = $_POST['pineapple2'];
             if($var != "none"){
+                $order .= "PINEAPPLE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "MUSHROOMS: ";
             $var = $_POST['mushrooms2'];
             if($var != "none"){
+                $order .= "MUSHROOMS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "ONIONS: ";
             $var = $_POST['onions2'];
             if($var != "none"){
+                $order .= "ONIONS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "HOT SAUCE: ";
             $var = $_POST['hot-sauce2'];
             if($var != "none"){
+                $order .= "HOT SAUCE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SPINACH: ";
             $var = $_POST['spinach2'];
             if($var != "none"){
+                $order .= "SPINACH: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "TOMATOES: ";
             $var = $_POST['tomatoes2'];
             if($var != "none"){
+                $order .= "TOMATOES: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "OLIVES: ";
             $var = $_POST['olives2'];
             if($var != "none"){
+                $order .= "OLIVES: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BANANA PEPPERS: ";
             $var = $_POST['banana-peppers2'];
             if($var != "none"){
+                $order .= "BANANA PEPPERS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "RED PEPPERS: ";
             $var = $_POST['red-peppers2'];
             if($var != "none"){
+                $order .= "RED PEPPERS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "JALAPENO PEPPERS: ";
             $var = $_POST['jalapeno-peppers2'];
             if($var != "none"){
+                $order .= "JALAPENO PEPPERS: ";
                 $order .= $var;
             }
 
@@ -301,135 +301,135 @@
                 $order .= ", ";
             }
 
-            $order .= "PEPPERONI: ";
             $var = $_POST['pepperoni'];
             if($var != "none"){
+                $order .= "PEPPERONI: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "HAM: ";
             $var = $_POST['ham'];
             if($var != "none"){
+                $order .= "HAM: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BACON: ";
             $var = $_POST['bacon'];
             if($var != "none"){
+                $order .= "BACON: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SAUSAGE: ";
             $var = $_POST['sausage'];
             if($var != "none"){
+                $order .= "SAUSAGE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SALAMI: ";
             $var = $_POST['salami'];
             if($var != "none"){
+                $order .= "SALAMI: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BEEF: ";
             $var = $_POST['beef'];
             if($var != "none"){
+                $order .= "BEEF: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "Anchovies: ";
             $var = $_POST['anchovies'];
             if($var != "none"){
+                $order .= "Anchovies: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "Chicken: ";
             $var = $_POST['chicken'];
             if($var != "none"){
+                $order .= "Chicken: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "PORK: ";
             $var = $_POST['pork'];
             if($var != "none"){
+                $order .= "PORK: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "PINEAPPLE: ";
             $var = $_POST['pineapple'];
             if($var != "none"){
+                $order .= "PINEAPPLE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "MUSHROOMS: ";
             $var = $_POST['mushrooms'];
             if($var != "none"){
+                $order .= "MUSHROOMS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "ONIONS: ";
             $var = $_POST['onions'];
             if($var != "none"){
+                $order .= "ONIONS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "HOT SAUCE: ";
             $var = $_POST['hot-sauce'];
             if($var != "none"){
+                $order .= "HOT SAUCE: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "SPINACH: ";
             $var = $_POST['spinach'];
             if($var != "none"){
+                $order .= "SPINACH: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "TOMATOES: ";
             $var = $_POST['tomatoes'];
             if($var != "none"){
+                $order .= "TOMATOES: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "OLIVES: ";
             $var = $_POST['olives'];
             if($var != "none"){
+                $order .= "OLIVES: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "BANANA PEPPERS: ";
             $var = $_POST['banana-peppers'];
             if($var != "none"){
+                $order .= "BANANA PEPPERS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "RED PEPPERS: ";
             $var = $_POST['red-peppers'];
             if($var != "none"){
+                $order .= "RED PEPPERS: ";
                 $order .= $var;
                 $order .= ", ";
             }
 
-            $order .= "JALAPENO PEPPERS: ";
             $var = $_POST['jalapeno-peppers'];
             if($var != "none"){
+                $order .= "JALAPENO PEPPERS: ";
                 $order .= $var;
                 $order .= " ";
             }
