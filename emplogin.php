@@ -52,7 +52,6 @@
 </head>
 <body>
     <?php include 'nav.php' ?>
-    <?php include 'footer.php' ?>
     <?php
     $currPrivs = $_SESSION['privileges'];
     if($currPrivs == '1')
@@ -109,6 +108,7 @@
     }
 
     ?>
+    <?php include 'footer.php' ?>
 
 </body>
 </html>
