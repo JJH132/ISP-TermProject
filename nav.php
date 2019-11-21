@@ -17,7 +17,8 @@
     	echo '<a class="rightNavLinks" href="accountdetails.php">Account Details</a>';
     if(isset($_SESSION['email']))
 	    {
-	    	echo "Hello " . $_SESSION['email'] . ".<br>";
+
+	    	echo '<a class="rightNavLinks"> Hello ' . $_SESSION['email'] . '.</a><br>';
 	    	echo '<a class="rightNavLinks" href="logout.php">Log out </a>';
 	    }
 	    else
