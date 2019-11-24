@@ -16,7 +16,7 @@ require '../config.php';
 //     $highlightMajor = '#B89B82';
 //     $body = '#E3E3E3';
 //     $headColor = '#C5C5C9';
-//     $mainText = '#3D3D3D';
+//     $mainText = '#3D3D3D'; 
 //     $highlightMinor = '#D9B79A';
 // }
 
@@ -135,4 +135,96 @@ body{
 .flex-container > div {
   margin: 3px;
   line-height: 1.3;
+}
+
+.homeH {
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.homeH h1{
+    color: <?=$mainText?>; 
+    font-size: 100px; 
+    font-weight: bold;
+}
+
+.homeH h2{
+    font-size: 40px;
+}
+
+.aboutus p{
+    color: <?=$mainText?>;
+    font-family: 'Roboto', sans-serif;
+}
+
+.aboutus h1{
+    color: <?=$titleColor?>;
+    font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=text], input[type=number]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  margin-top: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  margin: auto;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  color: black;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  border-right: 2px solid grey;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

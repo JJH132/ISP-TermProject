@@ -8,21 +8,17 @@
 <body>
 
     <?php include 'nav.php' ?>
-
-    <br>
-    <div style="color: #654321; font-size: 40px; font-weight: bold;font-family: 'Montserrat Alternates', sans-serif; text-align: center;">
-    	Welcome to <?=$companyName->contents?>!
+    <div class="mainContainer">
+    <div class="homeH">
+    	<h2>Welcome to <?=$companyName->contents?>!</h2>
+    	<h1>Place your homepage here!</h1> 
     </div>
-    <br>
-    <br>
-    <div style="color: #654321; font-size: 100px; font-weight: bold;font-family: 'Montserrat Alternates', sans-serif; text-align: center;">
-    	This could be your homepage!
-    </div>
+</div>
 
-    <br>
-    <br>
-    <br>
-    <div style="font-size: 2.5em; margin: auto; text-align: center;">DEALS! DEALS! DEALS!</div>
+    <div style="font-size: 2.5em; margin: auto; text-align: center;">
+    <!-- DEALS! DEALS! DEALS! -->
+    <img style="width: 100%" src="img/deals.png">
+    </div>
     <?php include 'footer.php' ?>
 </body>
 </html>
