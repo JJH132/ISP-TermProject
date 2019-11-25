@@ -50,6 +50,38 @@
     <meta name="description" content="">
     <?php include 'htmlHead.php';?>
 </head>
+<?php $highlightMajor = colorScheme::getColorHexByColorName("highlightMajor"); ?>
+<style type="text/css">
+	table {
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+	border-collapse: collapse;
+	width: 95%;
+	color: black;
+	margin-bottom: 75px;
+	}
+
+	td, th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	}
+
+	tr{
+	background-color: white;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2;}
+
+	tr:hover {background-color: #ddd;}
+
+	th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: <?=$highlightMajor?>;
+	color: black;
+	}
+</style>
 <body>
     <?php include 'nav.php' ?>
     <?php

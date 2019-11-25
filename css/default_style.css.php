@@ -9,7 +9,7 @@ require '../config.php';
     $mainText = colorScheme::getColorHexByColorName("mainText");
     $highlightMinor = colorScheme::getColorHexByColorName("highlightMinor");
 }
-// # switch comment out code for localhost
+# switch comment out code for localhost
 // {
 //     $titleColor = '#856850';
 //     $minorText = '#705843';
@@ -28,7 +28,16 @@ require '../config.php';
 font-family: 'Roboto', sans-serif;
 font-family: 'Montserrat Alternates', sans-serif;
 */
-
+/*
+    COLORS PHP CODE
+    $titleColor = <?=$titleColor?>
+    $minorText = <?=$minorText?>
+    $highlightMajor = <?=$highlightMajor?>
+    $body = <?=$body?>
+    $headColor = <?=$headColor?>
+    $mainText = <?=$mainText?>
+    $highlightMinor = <?=$highlightMinor?>
+*/
 
 nav{
     background-color: <?=$headColor?>;
@@ -163,68 +172,123 @@ body{
 
 }
 
-
-/* Style inputs, select elements and textareas */
-input[type=text], input[type=number]{
-  width: 100%;
+.signinContainer input[type="text"], .signinContainer input[type="password"]{  
   padding: 12px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  resize: vertical;
+  resize: vertical;  
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  color: <?=$mainText?>;
 }
 
-/* Style the label to display next to the inputs */
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-/* Style the submit button */
-input[type=submit] {
-  margin-top: 10px;
-  cursor: pointer;
-  float: right;
-}
-
-/* Style the container */
-.container {
-  margin: auto;
-  margin-top: 75px;
-  margin-bottom: 75px;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 50%;
-  color: black;
-}
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-  border-right: 2px solid grey;
-}
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+.signinContainer button{
+    border-radius: 4px;
     width: 100%;
-    margin-top: 0;
-  }
+    height: 40px;
+    font-size: 1.1em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: <?=$mainText?>;
+    border: 1px solid <?=$mainText?>;
+    color: <?=$body?>; 
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.signinContainer {
+  margin: auto;
+  border-radius: 5px;
+  background-color: <?=$highlightMinor?>;
+  border: 1px solid <?=$highlightMajor?>;
+  padding: 30px;
+  width: 25%;
+  color: <?=$mainText?>;
+}
+
+.signInHeader{
+    font-size: 1.5em;
+    padding-top: 75px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    color: <?=$mainText?>;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.sininCreateAccout {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 75px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+
+.wapper h2{
+    font-size: 1.7em;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.wrapper{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    /*margin: auto;*/
+    background-color: <?=$headColor?>;
+    border-radius: 4px;
+    padding: 25px;
+    width: 60%;
+    /*position: relative;*/
+}
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 85%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+.signupdiv {
+/*    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+}
+
+.signupdiv input[type="text"], .signupdiv input[type="password"], .signupdiv input[type="number"]{  
+  padding: 12px;,
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;  
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: <?=$mainText?>;
+}
+
+.signupdiv input[type="submit"], .signupdiv input[type="reset"]{
+    border-radius: 4px;
+    /*width: 100%;*/
+    height: 40px;
+    font-size: 1.1em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: <?=$mainText?>;
+    border: 1px solid <?=$mainText?>;
+    color: <?=$body?>; 
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.accountDetails {
+    color: <?=$mainText?>;
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
