@@ -34,7 +34,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>[Untitled] Pizza | Home</title>
+    <title>[Untitled] Pizza | Account Details</title>
     <meta name="description" content="">
     <?php include 'htmlHead.php';?>
 </head>

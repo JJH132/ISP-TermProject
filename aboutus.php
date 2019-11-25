@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>[Untitled] Pizza | Home</title>
+    <title>[Untitled] Pizza | About Us</title>
     <meta name="description" content="">
     <?php include 'htmlHead.php'?>
 </head>

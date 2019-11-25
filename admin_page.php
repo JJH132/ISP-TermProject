@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php include 'htmlHead.php';?>
-    <title><?=$companyName->contents?> | Home</title>
+    <title><?=$companyName->contents?> | Admin</title>
     <meta name="description" content="">
 </head>
 <body>

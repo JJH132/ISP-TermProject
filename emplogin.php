@@ -46,7 +46,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-    <title>[Untitled] Pizza | Home</title>
+    <title>[Untitled] Pizza | Employee Login</title>
     <meta name="description" content="">
     <?php include 'htmlHead.php';?>
 </head>

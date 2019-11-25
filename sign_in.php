@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <?php include 'htmlHead.php';?>
-        <title><?=$companyName->contents?> | Login</title>
+        <title><?=$companyName->contents?> | Sign In</title>
         <meta name="description" content="">
     </head>
     <body>
