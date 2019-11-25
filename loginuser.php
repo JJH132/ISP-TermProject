@@ -20,7 +20,7 @@
 			if($count == 1)
 			{
 				$_SESSION['email'] = $email;
-				echo "<script type='text/javascript'>alert('Login Credentials verified')</script>";
+				 header("Location: order.php");
 			}
 			else
 			{

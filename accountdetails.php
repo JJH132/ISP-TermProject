@@ -42,19 +42,19 @@ session_start();
     <?php include 'nav.php' ?>
     <div class="accountDetails">
 
-    Name: <br> <?php echo $full_name; ?>
+    Name:  <?php echo $full_name; ?>
     <br>
-    User ID: <br> <?php echo $userId; ?>
+    User ID:  <?php echo $userId; ?>
     <br>
-    Current Password: <br> <?php echo $password; ?>
+    Current Password:  <?php echo $password; ?>
     <br>
-    Phone Number: <br> <?php echo $phone; ?>
+    Phone Number:  <?php echo $phone; ?>
     <br>
-    Address: <br> <?php echo $address; ?>
+    Address:  <?php echo $address; ?>
     <br>
-    Past Orders (by order id): <br> <?php echo $past_orders; ?>
+    Past Orders (by order id):  <?php echo $past_orders; ?>
     <br>
-    Date Account Created: <br> <?php echo $datecreated; ?>
+    Date Account Created:  <?php echo $datecreated; ?>
     <br>
 
 
