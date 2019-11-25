@@ -11,8 +11,8 @@
     <div class="signInHeader">
         <h2>Sign in to <?=$companyName->contents?></h2>
     </div>
-    <div class="signinContainer">
-        <form action="loginuser.php" id="sign_in">
+    <div class="signinContainer" id="sign_in">
+        <form action="loginuser.php" method="post">
             <input  placeholder="Email" type="text" name="txt_email" id="txt_email">
             <br>
             <input placeholder="Password"  type="Password" name="txt_pass" id="txt_pass"> <br>
