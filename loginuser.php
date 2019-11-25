@@ -40,7 +40,6 @@
 </head>
 <body>
     <?php include 'nav.php' ?>
-    <?php echo $_SESSION['email']; ?>
     <?php include 'footer.php' ?>
 </body>
 </html>
