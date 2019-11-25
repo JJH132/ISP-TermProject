@@ -5,7 +5,7 @@
         <?=$companyName->contents?> &copy; <?php echo date("Y"); ?>
     </div>
 
-    <a class="footerLeft" href="admin_login.php">Administrator Login</a>
+    <a class="footerLeft" href="admin_login.php">Employee Login</a>
 </footer>
 
 <!-- [Untitled] Pizza Co.<br>

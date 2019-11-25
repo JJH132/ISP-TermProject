@@ -40,6 +40,7 @@ session_start();
 </head>
 <body>
     <?php include 'nav.php' ?>
+    <div class="accountDetails">
 
     Name: <br> <?php echo $full_name; ?>
     <br>
@@ -57,7 +58,7 @@ session_start();
     <br>
 
 
-
+</div>
 
 
     <?php include 'footer.php' ?>

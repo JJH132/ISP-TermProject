@@ -7,9 +7,7 @@
 </head>
 <body>
     <?php include 'nav.php' ?>
-    <h1 style="color: #3D3D3D; text-align: center;">Employee Login</h1>
-    <br>
-    <div align="center" id="sign_in">
+<!--     <div align="center" id="sign_in">
             <form action="emplogin.php" method="post">
                 <table id="emp_sign_in" align="center">
                 	<tr>
@@ -24,6 +22,18 @@
                 </table>
                 <button type="submit" id="sign_in_button" name="sign_in_button">Sign In</button>
             </form>
+    </div>
+ -->
+    <div class="signInHeader">
+        <h2><?=$companyName->contents?> Employee Login</h2>
+    </div>
+    <div class="signinContainer" style="margin-bottom: 75px;">
+        <form action="emplogin.php" id="sign_in">
+            <input  placeholder="Employee Username" type="text" name="emp_usr" id="emp_usr">
+            <br>
+            <input placeholder="Password"  type="Password" name="emp_pass" id="emp_pass"> <br>
+            <button type="submit" id="sign_in_button" name="sign_in_button">Sign In</button>
+        </form>
     </div>
 
 
