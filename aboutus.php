@@ -33,9 +33,7 @@
         	more customize their website, and not just having a section of someone else's website. Sometimes these items aren't listed 
         	correctly, or the order is received correctly.
         </p>
-        <a href="media/ISP_Final_Presentation.pptx">Power Point Presentation </a>
-        <span>&nbsp</span>
-        <a href="media/ISPTerm_Paper_Final.pdf">Final Report</a>
+
     </div>
     </div>
 
